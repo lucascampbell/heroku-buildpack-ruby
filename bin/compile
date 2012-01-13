@@ -1,20 +1,19 @@
 #!/usr/bin/env ruby
+require 'open-uri'
 
 RESOURCE_URL="https://s3.amazonaws.com/rhoconnect-resource/rhoconnect-resource.tar"
-
 RESOURCE_TAR_FILE="rhoconnect-resource.tar"
+
 `echo "-----> Installing Rhoconnect-resource..."`
-curl --silent --max-time 150 --location $RESOURCE_URL -o $RESOURCE_TAR_FILE
+File.open(RESOURCE_TAR_FILE, 'wb') do |fo|
+  fo.print open("http://recordtemple.com.s3.amazonaws.com/music/745/original/The%20Stranger.mp3?1292096514").read
+end
 
 # Error checking
-if [ ! -f $RESOURCE_TAR_FILE ]; then
+if(File.exists? $RESOURCE_TAR_FILE)
   `echo "-----> Error downloading rhoconnect-resource. Please try again..."`
   exit 1
-fi
-if [ -z "`file $RESOURCE_TAR_FILE | grep tar`" ]; then
-  `echo "-----> Error installing Grails framework or unsupported Grails framework version specified. Please review Dev Center for a list of supported versions."`
-  exit 1
-fi
+end
 
 tar xmzf $RESOURCE_TAR_FILE
 rm $RESOURCE_TAR_FILE
