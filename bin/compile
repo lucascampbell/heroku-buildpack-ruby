@@ -1,11 +1,22 @@
 #!/usr/bin/env ruby
 
-# $:.unshift File.expand_path("../../lib", __FILE__)
-# require "language_pack"
-# `echo "inside of compile"`
-# if pack = LanguagePack.detect(ARGV[0], ARGV[1])
-#   pack.log("compile") do
-#     `echo "pack compile here ----"`
-#     pack.compile
-#   end
-# end
+RESOURCE_URL="https://s3.amazonaws.com/rhoconnect-resource/rhoconnect-resource.tar"
+
+RESOURCE_TAR_FILE="rhoconnect-resource.tar"
+`echo "-----> Installing Rhoconnect-resource..."`
+curl --silent --max-time 150 --location $RESOURCE_URL -o $RESOURCE_TAR_FILE
+
+# Error checking
+if [ ! -f $RESOURCE_TAR_FILE ]; then
+  `echo "-----> Error downloading rhoconnect-resource. Please try again..."`
+  exit 1
+fi
+if [ -z "`file $RESOURCE_TAR_FILE | grep tar`" ]; then
+  `echo "-----> Error installing Grails framework or unsupported Grails framework version specified. Please review Dev Center for a list of supported versions."`
+  exit 1
+fi
+
+tar xmzf $RESOURCE_TAR_FILE
+rm $RESOURCE_TAR_FILE
+
+`echo "-----> Done"`

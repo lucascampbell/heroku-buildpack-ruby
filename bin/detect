@@ -1,26 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
 
-#$:.unshift File.expand_path("../../lib", __FILE__)
-#require "language_pack"
-
-# if pack = LanguagePack.detect(ARGV.first)
-#   exit 0
-# else
-#   exit 1
-# end
-
-# bin/detect <build-dir>
 
 if [ -f $1/rhoconnect ]; then
   echo "found rhoconnect" && exit 0
 else
   echo "no" && exit 1
 fi
-
-# if File.exists("rhoconnect")
-#   `echo file rhoconnect found`
-#   exit 0
-# else
-#   `echo could not find file`
-#   exit 0
-# end
