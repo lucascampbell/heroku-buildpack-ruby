@@ -6,7 +6,7 @@ RESOURCE_TAR_FILE="rhoconnect-resource.tar"
 
 `echo "-----> Installing Rhoconnect-resource..."`
 File.open(RESOURCE_TAR_FILE, 'wb') do |fo|
-  fo.print open("http://recordtemple.com.s3.amazonaws.com/music/745/original/The%20Stranger.mp3?1292096514").read
+  fo.print open(RESOURCE_URL).read
 end
 
 # Error checking
