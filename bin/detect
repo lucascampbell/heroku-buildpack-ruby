@@ -1,8 +1,8 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env bash
 
 
 if [ -f $1/rhoconnect ]; then
-  `echo "found rhoconnect"` && exit 0
+  echo "found rhoconnect" && exit 0
 else
-  `echo "no"` && exit 1
+  echo "rhoconect not found" && exit 1
 fi
