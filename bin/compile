@@ -10,7 +10,7 @@ File.open(RESOURCE_TAR_FILE, 'wb') do |fo|
 end
 
 # Error checking
-if File.exists?(RESOURCE_TAR_FILE)
+if !File.exists?(RESOURCE_TAR_FILE)
   puts "-----> Error downloading rhoconnect-resource. Please try again..."
   exit 1
 end
