@@ -15,7 +15,10 @@ if !File.exists?(RESOURCE_TAR_FILE)
   exit 1
 end
 
+o = system "pwd"
+puts "output of pwd is ---#{o}"
+puts "starting to extract resource..."
 system "tar -xmvf #{RESOURCE_TAR_FILE}"
 #File.delete RESOURCE_TAR_FILE
 
-puts "-----> Done"
+puts "-----> Finished extracting resource"
