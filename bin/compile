@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'open-uri'
+
 $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
 puts "looking for pack"
