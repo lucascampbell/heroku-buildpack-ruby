@@ -4,9 +4,9 @@ puts "whodat"
 puts "unshift this!"
 #require "language_pack"
 
-puts "looking for the goodies."
+#puts "looking for the goodies."
 #if pack = LanguagePack.detect(ARGV.first)
-  puts "pack name is #{pack.name}"
+#  puts "pack name is #{pack.name}"
   # if [ -f $1/rhoconnect ]; then
   #     echo "found rhoconnect" && exit 0
   #   else
