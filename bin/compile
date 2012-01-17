@@ -21,6 +21,6 @@ system "tar -xmvf #{RESOURCE_TAR_FILE}"
 system "mv #{RESOURCE_FILE} /app/"
 File.delete RESOURCE_TAR_FILE
 
-system "cd /app;pwd;ls;cat Procfile"
+system "cd /app;pwd;ls;"
 
 puts "-----> Finished extracting resource"
