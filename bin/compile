@@ -18,9 +18,9 @@ end
 
 puts "starting to extract resource..."
 system "tar -xmvf #{RESOURCE_TAR_FILE}"
-system "mv #{RESOURCE_FILE} /app/"
+#system "mv #{RESOURCE_FILE} /app/"
 File.delete RESOURCE_TAR_FILE
 
-system "cd /app;pwd;ls;"
+system "pwd;ls -altr /app;cat /app/config.ru"
 
 puts "-----> Finished extracting resource"
