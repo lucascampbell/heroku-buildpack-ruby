@@ -20,7 +20,7 @@ puts "starting to extract resource..."
 system "tar -xmvf #{RESOURCE_TAR_FILE}"
 system "mv #{RESOURCE_FILE} /app/"
 File.delete RESOURCE_TAR_FILE
-system "pwd"
-system "cd ..;ls"
+
+system "cd ..;pwd;ls"
 
 puts "-----> Finished extracting resource"
