@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-$:.unshift File.expand_path("../../lib", __FILE__)
-require "language_pack"
+#$:.unshift File.expand_path("../../lib", __FILE__)
+#require "language_pack"
 
 puts "looking for the goodies."
 # if pack = LanguagePack.detect(ARGV.first)
