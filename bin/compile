@@ -1,26 +1,10 @@
 #!/usr/bin/env ruby
 require 'open-uri'
+$:.unshift File.expand_path("../../lib", __FILE__)
+require "language_pack"
 
-RESOURCE_URL="https://s3.amazonaws.com/rhoconnect-resource/rhoconnect-resource.tar"
-RESOURCE_TAR_FILE="rhoconnect-resource.tar"
-RESOURCE_FILE = "rhoconnect-resource"
-
-puts "-----> Installing Rhoconnect-resource..."
-File.open(RESOURCE_TAR_FILE, 'wb') do |fo|
-  fo.print open(RESOURCE_URL).read
+if pack = LanguagePack.detect(ARGV[0], ARGV[1])
+  pack.log("compile") do
+    pack.compile
+  end
 end
-
-# Error checking
-if !File.exists?(RESOURCE_TAR_FILE)
-  puts "-----> Error downloading rhoconnect-resource. Please try again..."
-  exit 1
-end
-
-puts "starting to extract resource..."
-system "tar -xmvf #{RESOURCE_TAR_FILE}"
-#system "mv #{RESOURCE_FILE} /app/"
-File.delete RESOURCE_TAR_FILE
-
-system "pwd;ls -altr /app;cat /app/config.ru"
-
-puts "-----> Finished extracting resource"

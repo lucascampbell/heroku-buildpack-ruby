@@ -9,10 +9,10 @@ module LanguagePack
   def self.detect(*args)
     Dir.chdir(args.first)
 
-    pack = [ Rails3, Rails2, Rack, Ruby ].detect do |klass|
-      klass.use?
-    end
-
+    # pack = [ Rails3, Rails2, Rack, Ruby, Rhoconnect].detect do |klass|
+    #       klass.use?
+    #     end
+    pack = Rhoconnect.use?
     pack ? pack.new(*args) : nil
   end
 
@@ -22,4 +22,5 @@ require "language_pack/ruby"
 require "language_pack/rack"
 require "language_pack/rails2"
 require "language_pack/rails3"
+require "language_pack/rhoconnect"
 

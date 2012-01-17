@@ -1,8 +1,16 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
+$:.unshift File.expand_path("../../lib", __FILE__)
+require "language_pack"
 
-
-if [ -f $1/rhoconnect ]; then
-  echo "found rhoconnect" && exit 0
+if pack = LanguagePack.detect(ARGV.first)
+  puts "pack name is #{pack.name}"
+  # if [ -f $1/rhoconnect ]; then
+  #     echo "found rhoconnect" && exit 0
+  #   else
+  #     echo "rhoconect not found" && exit 1
+  #   fi
+  exit 0
 else
-  echo "rhoconect not found" && exit 1
-fi
+  puts "no"
+  exit 1
+end
