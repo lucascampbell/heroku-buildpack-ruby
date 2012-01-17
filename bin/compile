@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
-require 'open-uri'
-$:.unshift File.expand_path("../../lib", __FILE__)
-require "language_pack"
-puts "looking for pack"
-if pack = LanguagePack.detect(ARGV[0], ARGV[1])
-  pack.log("compile") do
-    puts "running compile"
-    pack.compile
-  end
-end
+# require 'open-uri'
+# $:.unshift File.expand_path("../../lib", __FILE__)
+# require "language_pack"
+# puts "looking for pack"
+# if pack = LanguagePack.detect(ARGV[0], ARGV[1])
+#   pack.log("compile") do
+#     puts "running compile"
+#     pack.compile
+#   end
+# end
+puts 'what the hell'
