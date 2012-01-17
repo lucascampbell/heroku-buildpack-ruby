@@ -2,7 +2,7 @@
 puts "whodat"
 $:.unshift File.expand_path("../../lib", __FILE__)
 puts "unshift this!"
-require "language_pack"
+#require "language_pack"
 
 puts "looking for the goodies."
 if pack = LanguagePack.detect(ARGV.first)
