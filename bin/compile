@@ -19,4 +19,5 @@ puts "starting to extract resource..."
 system "tar -xmvf #{RESOURCE_TAR_FILE}"
 #File.delete RESOURCE_TAR_FILE
 system "pwd"
+system "ls"
 puts "-----> Finished extracting resource"
