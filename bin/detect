@@ -2,6 +2,7 @@
 $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
 
+puts "looking for the goodies."
 if pack = LanguagePack.detect(ARGV.first)
   puts "pack name is #{pack.name}"
   # if [ -f $1/rhoconnect ]; then
