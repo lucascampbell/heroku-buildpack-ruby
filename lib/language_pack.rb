@@ -18,7 +18,7 @@ module LanguagePack
   end
 
 end
-
+puts "adding languages"
 require "language_pack/ruby"
 require "language_pack/rack"
 require "language_pack/rails2"
