@@ -10,8 +10,6 @@ module LanguagePack
     Dir.chdir(args.first)
     
     pack = [ Rails3, Rails2, Rack, Ruby, Rhoconnect].detect do |klass|
-           puts "class is --- #{klass}"
-           puts "class use --- #{klass.use?}"
            klass.use?
     end
     

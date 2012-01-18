@@ -25,10 +25,10 @@ class LanguagePack::Rhoconnect < LanguagePack::Ruby
 
     puts "starting to extract resource..."
     system "tar -xmvf #{RESOURCE_TAR_FILE}"
-    #system "mv #{RESOURCE_FILE} /app/"
+    system "mv #{RESOURCE_FILE} /app/"
     File.delete RESOURCE_TAR_FILE
 
-    system "pwd;ls -altr /app;cat /app/config.ru"
+    system "pwd;ls -altr /app;"
 
     puts "-----> Finished extracting resource"
     super
