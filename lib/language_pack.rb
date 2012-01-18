@@ -12,7 +12,7 @@ module LanguagePack
     pack = [ Rails3, Rails2, Rack, Ruby, Rhoconnect].detect do |klass|
            klass.use?
     end
-    
+    puts "pack"
     pack ? pack.new(*args) : nil
   end
 

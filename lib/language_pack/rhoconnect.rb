@@ -12,7 +12,6 @@ class LanguagePack::Rhoconnect < LanguagePack::Ruby
   end
   
   def compile
-    
     puts "-----> Installing Rhoconnect-resource..."
     File.open(RESOURCE_TAR_FILE, 'wb') do |fo|
       fo.print open(RESOURCE_URL).read
