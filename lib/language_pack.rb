@@ -14,7 +14,7 @@ module LanguagePack
            puts "class use --- #{klass.use?}"
            klass.use?
     end
-    #pack = Rhoconnect.use?
+    
     pack ? pack.new(*args) : nil
   end
 
