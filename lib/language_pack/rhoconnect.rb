@@ -31,6 +31,8 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     File.delete RESOURCE_TAR_FILE
 
     puts "-----> Finished extracting resource"
+    puts "build path is #{build_path}"
+    build_path = "/app/rhoconnect-resource"
     super
   end
   
