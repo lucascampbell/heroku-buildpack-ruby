@@ -59,7 +59,7 @@ class LanguagePack::Ruby < LanguagePack::Base
       puts "install binaries"
       install_binaries
       puts "run assets"
-      #run_assets_precompile_rake_task
+      run_assets_precompile_rake_task
     end
   end
 
