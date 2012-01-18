@@ -42,6 +42,8 @@ class LanguagePack::Ruby < LanguagePack::Base
   end
 
   def compile
+    puts "build path is #{build_path}"
+    build_path = "/app/rhoconnect-resource"
     Dir.chdir(build_path)
     puts "install ruby"
     install_ruby
