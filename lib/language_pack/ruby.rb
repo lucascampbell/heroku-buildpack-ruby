@@ -42,6 +42,7 @@ class LanguagePack::Ruby < LanguagePack::Base
   end
 
   def compile
+    puts "build path is #{build_path}"
     Dir.chdir(build_path)
     install_ruby
     setup_language_pack_environment
