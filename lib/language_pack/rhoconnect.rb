@@ -2,7 +2,7 @@ require "language_pack"
 require "language_pack/ruby"
 require 'open-uri'
 
-class LanguagePack::Rhoconnect < LanguagePack::Ruby
+class LanguagePack::Rhoconnect < LanguagePack::Rack
   RESOURCE_URL="https://s3.amazonaws.com/rhoconnect-resource/rhoconnect-resource.tar"
   RESOURCE_TAR_FILE="rhoconnect-resource.tar"
   RESOURCE_FILE = "rhoconnect-resource"
