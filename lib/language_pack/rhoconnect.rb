@@ -12,7 +12,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Ruby
   end
   
   def compile
-    super
+    
     puts "-----> Installing Rhoconnect-resource..."
     File.open(RESOURCE_TAR_FILE, 'wb') do |fo|
       fo.print open(RESOURCE_URL).read
@@ -30,7 +30,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Ruby
     File.delete RESOURCE_TAR_FILE
 
     puts "-----> Finished extracting resource"
-    
+    super
   end
   
 end

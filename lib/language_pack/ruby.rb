@@ -44,13 +44,20 @@ class LanguagePack::Ruby < LanguagePack::Base
   def compile
     puts "build path is #{build_path}"
     Dir.chdir(build_path)
+    puts "install ruby"
     install_ruby
+    puts "setup language pack"
     setup_language_pack_environment
     allow_git do
+      puts "install language pack"
       install_language_pack_gems
+      puts "build bundler"
       build_bundler
+      puts "create db"
       create_database_yml
+      puts "install binaries"
       install_binaries
+      puts "run assets"
       run_assets_precompile_rake_task
     end
   end
