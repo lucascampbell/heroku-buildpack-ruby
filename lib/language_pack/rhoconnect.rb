@@ -28,7 +28,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Ruby
     system "cp -r #{RESOURCE_FILE} /app/"
     system "cp -r /app/#{RESOURCE_FILE}/* /app/"
     system "ls -ltr /app/"
-    #File.delete RESOURCE_TAR_FILE
+    File.delete RESOURCE_TAR_FILE
 
     puts "-----> Finished extracting resource"
     super
