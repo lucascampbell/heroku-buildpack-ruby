@@ -378,6 +378,7 @@ params = CGI.parse(uri.query || "")
   def add_bundler_to_load_path
     return if @bundler_loadpath
     puts "slug vendor base -- #{slug_vendor_base}"
+    puts $:
     $: << File.expand_path(Dir["#{slug_vendor_base}/gems/bundler*/lib"].first)
     @bundler_loadpath = true
   end
