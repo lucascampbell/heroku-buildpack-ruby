@@ -43,7 +43,7 @@ class LanguagePack::Ruby < LanguagePack::Base
 
   def compile
     puts "build path is #{build_path}"
-    Dir.chdir(build_path + "/rhoconnect-resource")
+    #Dir.chdir(build_path + "/rhoconnect-resource")
     puts "install ruby"
     install_ruby
     puts "setup language pack"
@@ -378,7 +378,7 @@ params = CGI.parse(uri.query || "")
   def add_bundler_to_load_path
     return if @bundler_loadpath
     path1 = "#{slug_vendor_base}/gems/bundler*/lib"
-    path =  Dir[path1].first || "./vender/bundle/gems/bundler*/lib"
+    path =  Dir[path1].first #|| "./vender/bundle/gems/bundler*/lib"
     puts "slug vendor base --#{path}"
     $: << File.expand_path(path)
     @bundler_loadpath = true
