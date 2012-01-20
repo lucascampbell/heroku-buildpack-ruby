@@ -35,11 +35,6 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     puts "-----> Finished extracting resource"
     
     super
-  end
-  
-  def release
-    puts "copying files into /app/ directory"
-    system "cp -rv /app/#{RESOURCE_FILE}/* /app/"
     #system "mv /app/#{RESOURCE_FILE}/* /app/"
   end
   
