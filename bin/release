@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
-$:.unshift File.expand_path("../../lib", __FILE__)
-require "language_pack"
+#$:.unshift File.expand_path("../../lib", __FILE__)
+#require "language_pack"
 
-if pack = LanguagePack.detect(ARGV[0], ARGV[1])
+# if pack = LanguagePack.detect(ARGV[0], ARGV[1])
   puts "running release"
   system "cp -rv /app/rhoconnect-resource/* /app/"
-  puts pack.release
-end
+  #puts pack.release
+#end
 
