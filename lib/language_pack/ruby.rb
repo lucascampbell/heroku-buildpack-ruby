@@ -43,7 +43,7 @@ class LanguagePack::Ruby < LanguagePack::Base
 
   def compile
     puts "build path is #{build_path}"
-    #Dir.chdir(build_path + "/rhoconnect-resource")
+    Dir.chdir(build_path + "/rhoconnect-resource")
     puts "install ruby"
     install_ruby
     puts "setup language pack"
