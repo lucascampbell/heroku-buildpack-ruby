@@ -28,6 +28,8 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     system "cp -r #{RESOURCE_FILE} /app/"
     system "mv /app/#{RESOURCE_FILE}/* /app/"
     system "ls -ltr /app/"
+    system "cat /app/Procfile "
+    system "ls -ltr /app/views/"
     File.delete RESOURCE_TAR_FILE
 
     puts "-----> Finished extracting resource"
@@ -38,7 +40,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
   def release
     puts "copying files into /app/ directory"
     #system "cp -rv /app/#{RESOURCE_FILE}/* /app/"
-    system "mv /app/#{RESOURCE_FILE}/* /app/"
+    #system "mv /app/#{RESOURCE_FILE}/* /app/"
   end
   
 end
