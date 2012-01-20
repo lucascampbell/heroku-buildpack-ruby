@@ -29,7 +29,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     system "mv /app/#{RESOURCE_FILE}/* /app/"
     system "ls -ltr /app/"
     system "cat /app/Procfile "
-    system "cat /app/views/index.erb"
+    system "cat /app/application.rb"
     File.delete RESOURCE_TAR_FILE
 
     puts "-----> Finished extracting resource"
