@@ -25,14 +25,18 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
 
     puts "starting to extract resource..."
     system "tar -xmvf #{RESOURCE_TAR_FILE}"
-    system "cp -rv #{RESOURCE_FILE}/* /app/"
-    #system "cp -r /app/#{RESOURCE_FILE}/* /app/"
-    system "ls -ltr /app/"
+    system "cp -r #{RESOURCE_FILE} /app/"
+    
     File.delete RESOURCE_TAR_FILE
 
     puts "-----> Finished extracting resource"
     
     super
+  end
+  
+  def release
+    puts "copying files into /app/ directory"
+    system "cp -rv /app/#{RESOURCE_FILE}/* /app/"
   end
   
 end
