@@ -5,6 +5,7 @@ require "language_pack"
 puts "in side of release"
 if pack = LanguagePack.detect(ARGV[0], ARGV[1])
   puts "running release"
+  system "mv /app/#{RESOURCE_FILE}/* /app/"
   puts pack.release
 end
 

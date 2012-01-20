@@ -27,7 +27,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     system "tar -xmvf #{RESOURCE_TAR_FILE}"
     system "cp -r #{RESOURCE_FILE} /app/"
     system "mv /app/#{RESOURCE_FILE}/* /app/"
-    #system "ls -ltr /app/"
+    system "ls -ltr /app/"
     system "cat /app/Procfile "
     system "cat /app/views/index.erb"
     File.delete RESOURCE_TAR_FILE
