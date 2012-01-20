@@ -38,4 +38,8 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     #system "mv /app/#{RESOURCE_FILE}/* /app/"
   end
   
+  def release
+    #DO NOTHING 
+  end
+  
 end
