@@ -32,7 +32,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
 
     puts "-----> Finished extracting resource"
     
-    super
+    #super
   end
   
 end
