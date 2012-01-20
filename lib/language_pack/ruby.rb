@@ -52,13 +52,13 @@ class LanguagePack::Ruby < LanguagePack::Base
       puts "install language pack"
       install_language_pack_gems
       puts "build bundler"
-      #build_bundler
+      build_bundler
       puts "create db"
       #create_database_yml
       puts "install binaries"
       #install_binaries
       puts "run assets"
-      run_assets_precompile_rake_task
+      #run_assets_precompile_rake_task
     end
   end
 
