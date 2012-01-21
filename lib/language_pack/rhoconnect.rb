@@ -38,8 +38,4 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     super
   end
   
-  def release
-    #DO NOTHING 
-  end
-  
 end
