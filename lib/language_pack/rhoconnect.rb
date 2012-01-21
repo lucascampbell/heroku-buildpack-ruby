@@ -25,6 +25,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
 
     puts "starting to extract resource..."
     system "tar -xmvf #{RESOURCE_TAR_FILE}"
+    system "rm -r /app/#{RESOURCE_FILE}"
     system "cp -r #{RESOURCE_FILE} /app/"
     #system "mv /app/#{RESOURCE_FILE}/* /app/"
     #system "ls -ltr /app/"
@@ -35,7 +36,7 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     puts "-----> Finished extracting resource"
     
     super
-    #system "mv /app/#{RESOURCE_FILE}/* /app/"
+    system "cp -rv /app/#{RESOURCE_FILE}/* /app/"
   end
   
   def release
