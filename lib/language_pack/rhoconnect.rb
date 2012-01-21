@@ -25,8 +25,8 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
 
     puts "starting to extract resource..."
     system "tar -xmvf #{RESOURCE_TAR_FILE}"
-    system "rm -r /app/#{RESOURCE_FILE}"
-    system "cp -r #{RESOURCE_FILE} /app/"
+    
+    system "cp -r #{RESOURCE_FILE}/* /app/#{RESOURCE_FILE}/"
     #system "mv /app/#{RESOURCE_FILE}/* /app/"
     #system "ls -ltr /app/"
     #system "cat /app/Procfile "
@@ -36,8 +36,6 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     puts "-----> Finished extracting resource"
     
     super
-    res = system "mv /app/#{RESOURCE_FILE}/* /app/"
-    puts "result of move is --- #{res}"
   end
   
   def release
