@@ -36,7 +36,8 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     puts "-----> Finished extracting resource"
     
     super
-    system "mv /app/#{RESOURCE_FILE}/* /app/"
+    res = system "mv /app/#{RESOURCE_FILE}/* /app/"
+    puts "result of move is --- #{res}"
   end
   
   def release
