@@ -36,7 +36,6 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     puts "-----> Finished extracting resource"
     
     super
-    system "cp -r #{RESOURCE_FILE}/* /app/"
   end
   
 end
