@@ -59,7 +59,7 @@ class LanguagePack::Ruby < LanguagePack::Base
       install_binaries
       puts "run assets"
       run_assets_precompile_rake_task
-      system "cp -r #{build_path}/#{RESOURCE_FILE}/* /app/"
+      system "cp -r #{build_path}/rhoconnect-resource/* /app/"
     end
   end
 
