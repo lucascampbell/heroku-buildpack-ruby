@@ -38,4 +38,8 @@ class LanguagePack::Rhoconnect < LanguagePack::Rack
     super
   end
   
+  def release
+    puts "release son"
+  end
+  
 end
